@@ -5,7 +5,6 @@ button.addEventListener('click', () => {
   heart.className = 'floatingHeart';
   heart.innerHTML = '💖';
 
-  // Random horizontal position near the button
   const x = button.offsetLeft + Math.random() * button.offsetWidth;
   const y = button.offsetTop;
   heart.style.left = x + 'px';
@@ -13,7 +12,6 @@ button.addEventListener('click', () => {
 
   document.body.appendChild(heart);
 
-  // Remove the heart after animation ends
   heart.addEventListener('animationend', () => {
     heart.remove();
   });
